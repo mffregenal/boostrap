@@ -1,5 +1,14 @@
 $colorBc:#198754;
 $colorBcmain:white;
+@mixin h {
+    height: 100px;
+    margin-bottom: 10px;
+    color: white;
+    justify-items: center;
+    width: 100%;
+    background: linear-gradient(orange, rgb(205, 169, 50));
+    
+}
 #grid-area{
     display: grid;
     grid-template-areas: "menu menu menu"
@@ -16,16 +25,44 @@ nav{
 main{
     background-color:$colorBcmain;
     grid-area: contenido;
-    & h1{
-        text-align: center;
-        background-color: orange;
+    text-align: center;
+}
+.contenido{
+    
+        height: 150px;
+        margin-bottom: 10px;
+        color: white;
+        justify-items: center;
+       
          width: 100%;
+         background: linear-gradient(orange,rgb(205, 169, 50) );
         }
+       
 
+
+.obrasSociales{
+   
+    display: flex;
+    background-color:#ccc ;
+    padding: 20px 0;
+
+    justify-content: space-between;
+
+}
+.prepagas{
+    height: 50px;
+    background-color:#ccc;
+    
+    justify-items: start;
+    
+}
+h1{
+    @include h;
+  
 }
 #perfumeria{
     width: 100%;
-    margin: 0 2%;
+    margin:1% 2%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     
@@ -47,7 +84,10 @@ main{
 
 
     }
-
+    & img:hover {
+        transform: scale(1.2, 1.2);
+      }
+      
 
 }
 #ofertas{
@@ -62,9 +102,11 @@ main{
         border-radius: 0;
         text-decoration: none;
         padding: 5px;
-
-
+       
     }
+
+
+    
     & a:hover{
         background-color: #00AAE4;
         border-radius: 5px;
@@ -78,6 +120,7 @@ main{
 }
 
 aside{
+    margin-top: 5px;
     grid-area: contacto;
     background-color: $colorBc;
     padding: 10px;
@@ -95,12 +138,8 @@ aside{
         }
     }
 }
-.titulo{
-    text-align: center;
-    height: 40px;
-  
-  }
-  .parrafo{
+
+.parrafo{
     line-height: 20px;
     text-align: center;
     & h3{
@@ -139,13 +178,27 @@ aside{
   }
 .formulario{
     margin: 10px 20px;
+    & .contactanos{
+        height: 100px;
+        margin-bottom: 10px;
+        color: white;
+        justify-items: center;
+        width: 100%;
+        background: linear-gradient(orange, rgb(205, 169, 50));
+    
+      }
 
 }
 footer{
     grid-area: footer;
+    
+   
     text-align: center;
+   
     background-color: black;
     color: white;
+   
+
 
 
 }
@@ -161,6 +214,15 @@ footer{
         & iframe{
             width: auto;
         }
+    }
+    .obrasSociales{
+        display: grid;
+        grid-template-columns:45% 45%;
+        gap: 5px;
+        margin: 0 auto;
+         }
+    .prepagas{
+        text-align: center;
     }
     #ofertas{
         grid-template-columns: none;
