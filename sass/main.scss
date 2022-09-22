@@ -4,7 +4,10 @@ $colorBcmain:white;
     height: 100px;
     margin-bottom: 10px;
     color: white;
-    justify-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     background: linear-gradient(orange, rgb(205, 169, 50));
     
@@ -32,7 +35,7 @@ main{
         height: 150px;
         margin-bottom: 10px;
         color: white;
-        justify-items: center;
+        text-align: center;
        
          width: 100%;
          background: linear-gradient(orange,rgb(205, 169, 50) );
@@ -56,7 +59,7 @@ main{
     justify-items: start;
     
 }
-h1{
+.titulo{
     @include h;
   
 }
@@ -77,13 +80,13 @@ h1{
         padding: 5px;
 
 
- }
+        }
     & a:hover{
         background-color: #00AAE4;
         border-radius: 5px;
 
 
-    }
+         }
     & img:hover {
         transform: scale(1.2, 1.2);
       }
@@ -111,7 +114,7 @@ h1{
         background-color: #00AAE4;
         border-radius: 5px;
     }
-    & img:hover{
+    & div:hover{
         transform: scale(1.2, 1.4);
 
     }
@@ -150,31 +153,29 @@ aside{
       margin-bottom: 40px;
     }
   }
+  .empresa{
+    background-color: black;
+    background-image: url("../assets/img/interior-farmacia.jpg");
+    background-blend-mode: hard-light;
+}
+  
   .mision{
+    
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 20%;
-    margin: 5%;
+    gap: 20px;
+    margin:0 5%;
     align-items: stretch;
-    & img{
-      width: 100%;
-      height: 400px;
-  
-    }
-  }
-  .valores{
-    text-align: center;
-    margin-bottom: 10PX;
-    & P{
-      margin-bottom: 20px;
-  
-    }
+    color:white ;
+    
   }
   .iconos{
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 20% 20% 20% 20%;
     gap: 10px;
     justify-content: center;
+    color: white;
+   
   }
 .formulario{
     margin: 10px 20px;
